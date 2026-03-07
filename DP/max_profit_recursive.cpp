@@ -1,8 +1,7 @@
 //
-// Created by ishaa on 07-03-2026.
+// Created by ishaan on 07-03-2026.
 //
 
-#include "max_profit.h"
 #include <bits/stdc++.h>
 
 using namespace std;
