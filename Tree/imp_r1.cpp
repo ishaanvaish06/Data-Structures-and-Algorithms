@@ -48,6 +48,18 @@ void printTree(Node *root) {
     printTree(root->right);
     return;
 }
+
+map<int,int> m;
+void acessTre(Node *root,int c) {
+    if (root==NULL) return;
+    if (!m[c]) {
+        m[c]=root->data;
+        cout<<root->data<<" ";
+    }
+    acessTre(root->left,c-1);
+    acessTre(root->right,c+1);
+}
+
 int diameter=INT_MIN;
 int height(Node *root) {
     if (root==NULL) return 0;
@@ -65,5 +77,6 @@ int main() {
     cout<<height(root)<<endl;
     cout<<diameter<<endl;
     linetoline(root);
+    acessTre(root,0);
     return 0;
 }
